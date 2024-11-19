@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        .form__group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .form__field {
+            font-family: inherit;
+            font-size: 1rem;
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            padding: 10px 5px;
+            background: transparent;
+            transition: border-color 0.3s;
+        }
+
+        .form__label {
+    position: absolute;
+    top: 10px;  /* Adjusted slightly for spacing */
+    left: 5px;
+    font-size: 1rem;
+    color: #aaa;
+    transition: all 0.2s ease-in-out;
+}
+
+.form__field:focus + .form__label,
+.form__field:not(:placeholder-shown) + .form__label {
+    top: -10px; /* Moves label higher on focus or text entry */
+    font-size: 0.85rem;
+    color: #2196F3;  /* Set your desired color on focus */
+}
+
+.form__field {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 5px;
+    margin-bottom: 20px; /* Space between input fields */
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: transparent;
+    width: 100%;
+}
+
+.form__field:focus {
+    border-bottom: 2px solid #2196F3;
+}
+
+
+        button {
+            font-family: "Open Sans", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow:
+                1px 1px 0px 0px,
+                2px 2px 0px 0px,
+                3px 3px 0px 0px,
+                4px 4px 0px 0px,
+                5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            width: 100%;
+        }
+
+        button:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+
+        button:hover {
+            background: #38ef7d;
+            /* Modern green on hover */
+        }
+
+        @media (min-width: 768px) {
+            button {
+                padding: 0.25em 0.75em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/login" method="post">
+            <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Email" name="email" id="email" required />
+                <label for="email" class="form__label">Email</label>
+            </div>
+            <div class="form__group field">
+                <input type="password" class="form__field" placeholder="Password" name="password" id="password"
+                    required />
+                <label for="password" class="form__label">Password</label>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose</title>
+    <!-- <link rel="stylesheet" href="/public/login.css"> -->
+    <style>
+        button {
+            font-family: "Open Sans", sans-serif;
+            margin-bottom: 15px;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow:
+                1px 1px 0px 0px,
+                2px 2px 0px 0px,
+                3px 3px 0px 0px,
+                4px 4px 0px 0px,
+                5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        button:hover {
+            background: #38ef7d;
+        }
+    
+        button:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+        }
+    
+        @media (min-width: 768px) {
+            button {
+                padding: 0.25em 0.75em;
+            }
+        }
+    
+        .container {
+            width: 100%;
+            height: 100vh;
+            align-content: center;
+            justify-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="font-size: 50px;">Welcom to </h1>
+        <form action="/register">
+            <button type="submit" class="button">Register</button>
+        </form>
+        <form action="/login">
+            <button type="submit" class="button">Log-In</button>
+        </form>
+    </div>
+</body>
+
+</html>
