@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= name %>'s Profile
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .profile-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .bio {
+            font-style: italic;
+            color: #777;
+        }
+
+        .btn-primary,
+        .btn-danger {
+            font-weight: bold;
+            font-size: 14px;
+            padding: 8px 16px;
+            margin: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-header">
+                <h2>Welcome to <%= name %>'s Profile</h2>
+            </div>
+
+            <div class="profile-info">
+                <h3>Personal Information</h3>
+                <p><strong>Username:</strong>
+                    <%= name %>
+                </p>
+                <p><strong>Email:</strong>
+                    <%= email %>
+                </p>
+                <p><strong>Date of Birth:</strong>
+                    <%= date %>
+                </p>
+
+                <% if (bio) { %>
+                    <p><strong>Bio:</strong>
+                        <%= bio %>
+                    </p>
+                    <% } else { %>
+                        <p><strong>Bio:</strong> No bio available.</p>
+                        <% } %>
+            </div>
+
+            <div class="text-center mt-3">
+                <button onclick="window.location.href='/edit'" class="btn btn-primary">Edit Profile</button>
+                <!-- <button onclick="window.location.href='/profile/delete'" class="btn btn-danger">Delete Account</button> -->
+                <button onclick="window.location.href='/login'" class="btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -16,6 +16,10 @@
             margin: 0;
         }
 
+        h1 {
+            font-size: 25px;
+        }
+
         .container {
             background: #fff;
             padding: 20px;
@@ -23,6 +27,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 100%;
+            /* text-align: center; */
         }
 
         form {
@@ -37,38 +42,55 @@
         }
 
         .form__label {
-    position: absolute;
-    top: 10px;  /* Adjusted slightly for spacing */
-    left: 5px;
-    font-size: 1rem;
-    color: #aaa;
-    transition: all 0.2s ease-in-out;
-}
+            position: absolute;
+            top: 10px;
+            left: 5px;
+            font-size: 1rem;
+            color: #aaa;
+            transition: all 0.2s ease-in-out;
+        }
 
-.form__field:focus + .form__label,
-.form__field:not(:placeholder-shown) + .form__label {
-    top: -10px; /* Moves label higher on focus or text entry */
-    font-size: 0.85rem;
-    color: #2196F3;  /* Set your desired color on focus */
-}
+        .form__field:focus+.form__label,
+        .form__field:not(:placeholder-shown)+.form__label {
+            top: -10px;
+            font-size: 0.85rem;
+            color: #2196F3;
+        }
 
-.form__field {
-    font-family: inherit;
-    font-size: 1rem;
-    padding: 10px 5px;
-    margin-bottom: 20px; /* Space between input fields */
-    border: none;
-    border-bottom: 2px solid #ccc;
-    outline: none;
-    transition: border-color 0.3s ease;
-    background-color: transparent;
-    width: 100%;
-}
+        .form__field {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background-color: transparent;
+            width: 100%;
+        }
 
-.form__field:focus {
-    border-bottom: 2px solid #2196F3;
-}
+        .form__field:focus {
+            border-bottom: 2px solid #2196F3;
+        }
 
+        /* Styling for the date input to match other fields */
+        #date {
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 10px 5px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+            background-color: transparent;
+            width: 100%;
+        }
+
+        #date:focus {
+            border-bottom: 2px solid #2196F3;
+        }
 
         button {
             font-family: "Open Sans", sans-serif;
@@ -102,7 +124,6 @@
 
         button:hover {
             background: #38ef7d;
-            /* Modern green on hover */
         }
 
         @media (min-width: 768px) {
@@ -110,20 +131,29 @@
                 padding: 0.25em 0.75em;
             }
         }
+
+        .form__group p{
+            margin-bottom: -9px;
+            margin-left: 4px;
+            margin-top: -10px;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container">
         <form action="/register" method="post">
+            <h1><%= msg %></h1>
             <div class="form__group">
                 <input type="text" class="form__field" name="name" id="name" placeholder="Enter your Full name"
                     required />
                 <label for="name" class="form__label">Enter your Full name</label>
             </div>
             <div class="form__group">
-                <input type="text" class="form__field" name="age" id="age" placeholder="Enter your Age" required />
-                <label for="age" class="form__label">Enter your Age</label>
+                <p>Date Of Birth:</p>
+                <label for="date" class="form__label"></label>
+                <input type="date" class="form__field" name="date" id="date" placeholder="Birth-date" required />
             </div>
             <div class="form__group">
                 <input type="text" class="form__field" name="email" id="email" placeholder="Enter your email"

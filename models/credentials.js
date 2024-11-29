@@ -6,8 +6,8 @@ const credential = new Schema({
     type: String,
     required: true,
   },
-  age: {
-    type: Number,
+  date: {
+    type: Date,
     required: true,
   },
   email: {
