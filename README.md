@@ -27,31 +27,11 @@ Mongoose: MongoDB ODM for interacting with the database.
 Installation
 To use or modify this project locally, follow these steps:
 
-Clone the repository to your local machine:
-
-bash
-Copy code
-git clone https://github.com/yourusername/login-page.git  
-Navigate to the project directory:
-
-bash
-Copy code
-cd login-page  
-Install dependencies:
-
-bash
-Copy code
-npm install  
-Start the development server:
-
-bash
-Copy code
-npm start  
-Open your browser and navigate to:
-
-arduino
-Copy code
-http://localhost:3000  
+Clone the repository to your local machine.
+Navigate to the project directory.
+Install the required dependencies using npm install.
+Start the development server with npm start.
+Open your browser and go to http://localhost:3000.
 Future Improvements
 Add password reset functionality.
 Implement two-factor authentication for enhanced security.
